@@ -6,7 +6,7 @@
 
 
 
-void TIM4_Init(void);   
+void TIM3_Init(void);   
 void error_tickcount(void);
 void IWDG_Config(uint8_t prv ,uint16_t rlv);
 void IWDG_Feed(void);

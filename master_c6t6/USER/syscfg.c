@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////
-//¸ÃÎÄ¼şÓÃÓÚ¶¨Òåappº¯Êı
+// è¯¥æ–‡ä»¶ç”¨äºå®šä¹‰ app å‡½æ•°
 //////////////////////////////////////////////////////////////////
 #include "syscfg.h"
 
@@ -10,66 +10,69 @@ extern u8 error_check_enable;
 void systemconfig(void)
 {
 	delay_init();
-	
-	USART2_Init(115200);		//´®¿Ú³õÊ¼»¯£¬ÓÃÓÚÆÁÄ»Êı¾İÊÕ·¢
-	DWINPagePicSet(0);				//×ªµ½¿ªÊ¼Ò³
-	
-	LED_Init();							//LED ³õÊ¼»¯£¬Ò»°ãÓÃÓÚµ÷ÊÔ
-	lora_init();						//Lora ³õÊ¼»¯
-	
-	RELAY_Init();						//¼ÌµçÆ÷Êä³ö
-	
+
+	USART2_Init(115200); // ä¸²å£åˆå§‹åŒ–
+	DWINPagePicSet(0);	 // è½¬åˆ°å¼€å§‹é¡µï¼ˆæ¬¢è¿é¡µï¼‰
+
+	LED_Init();	 // LED æŒ‡ç¤ºç¯
+	lora_init(); // Lora åˆå§‹åŒ–
+
+	RELAY_Init(); // ç»§ç”µå™¨åˆå§‹åŒ–
+
 	IIC_Init();
-	AT24CXX_Init();					//EEPROM ³õÊ¼»¯
-	
-	TIM4_Init();						//´ò¿ª TIM4 ¶¨Ê±Æ÷£¬ÔÊĞí½ÓÊÕÆÁÄ»ÉÏ´«µÄÊı¾İ,¼û TIM4 ÖĞ¶Ï´¦Àíº¯Êı
-	
-	
-	//DeviceInfDeleteAllBlock();
-	
+	AT24CXX_Init(); // EEPROM åˆå§‹åŒ–ï¼ˆè‡ªæ£€ï¼‰
+
+	TIM3_Init(); // TIM4 åˆå§‹åŒ–ï¼Œç”¨äºå®šæ—¶å¤„ç†å±å¹•çš„å›ä¼ æ•°æ®
+
+	// DeviceInfDeleteAllBlock();
+
 	delay_ms(1500);
-	DWIN_init();						//µÏÎÄÆÁ³õÊ¼»¯
+	DWIN_init(); // DWINå±å¹•åˆå§‹åŒ–
 	NodeInfInit();
-	IWDG_Config(IWDG_Prescaler_64, 625);		//¿´ÃÅ¹·
+	IWDG_Config(IWDG_Prescaler_64, 625); // çœ‹é—¨ç‹—é…ç½®
 }
-
-
 
 u8 OPSTA_Get(u8 item)
 {
-	switch(item)
+	switch (item)
 	{
-		case sensornum :  return (OP_STA >> 4);
-		
-		case pairEN :  		return ((OP_STA >> 1) & 0X01);
-		
-		case pagenum : 		return (OP_STA & 0X01);
-		
-		default : 				return 0;
+	case sensornum:
+		return (OP_STA >> 4);
+
+	case pairEN:
+		return ((OP_STA >> 1) & 0X01);
+
+	case pagenum:
+		return (OP_STA & 0X01);
+
+	default:
+		return 0;
 	}
 }
-
-
 
 void OPSTA_Set(u8 item, u8 num)
 {
-	switch(item)
+	switch (item)
 	{
-		case sensornum :  OP_STA &= 0X0F;
-											OP_STA |= num << 4; break;
-		
-		case pairEN :  		OP_STA &= 0XFD;
-											OP_STA |= num << 1; break;
-		
-		case pagenum :		OP_STA &= 0XFE;
-											OP_STA |= num; 			break;
-		
-		default : 				break;
+	case sensornum:
+		OP_STA &= 0X0F;
+		OP_STA |= num << 4;
+		break;
+
+	case pairEN:
+		OP_STA &= 0XFD;
+		OP_STA |= num << 1;
+		break;
+
+	case pagenum:
+		OP_STA &= 0XFE;
+		OP_STA |= num;
+		break;
+
+	default:
+		break;
 	}
 }
-
-
-
 
 void NodeInfInit(void)
 {
@@ -79,174 +82,159 @@ void NodeInfInit(void)
 	PageNodeList_Update();
 }
 
-
-
-
-//ÅĞ¶Ï¸÷½ÚµãµÄerrorcountÖµÊÇ·ñ³¬³öÏŞÖÆ£¨ERRCOUNT£©
+// åˆ¤æ–­å„èŠ‚ç‚¹ error è®¡æ•°æ˜¯å¦è¶…é™åˆ¶
 void signalerror_check(void)
 {
 	u8 sigerr_flag = 0;
 	u8 node_num = 0;
-	
-	if(error_check_enable)
+
+	if (error_check_enable)
 	{
-		//test_pin ++;      
-		for(u8 i=0; i < DEVICE_NUM_MAX; i++)																																					//±È½ÏÃ¿Ò»¸ö½Úµã
+		// test_pin ++;
+		for (u8 i = 0; i < DEVICE_NUM_MAX; i++) // æ¯”è¾ƒæ¯ä¸€ä¸ªèŠ‚ç‚¹
 		{
-			if((sensor_device[i].devicenum != 0))																												//µ±devicenum²»ÎªÁã
+			if ((sensor_device[i].devicenum != 0)) // å½“devicenumä¸ä¸ºé›¶
 			{
-				if((sensor_device[i].errcount > ERRCOUNT) && (sensor_device[i].errflag == 0))							//¼ÆÊ±³¬ÏŞÈ´Ã»¸øerrflagÖÃÎ»
+				if ((sensor_device[i].errcount > ERRCOUNT) && (sensor_device[i].errflag == 0)) // è®¡æ—¶è¶…é™å´æ²¡ç»™ error flag å¤ä½
 				{
-					sensor_device[i].errflag = 1;																														//ÖÃÎ»errflag
+					sensor_device[i].errflag = 1; // ç½®ä½ errflag
 					sensor_device[i].dat = 0;
-					
-					while((NodeInfBuf[node_num][0] != sensor_device[i].devicenum) && (node_num < DEVICE_NUM_MAX)) node_num++;	//ÔÚ»º´æÇøÕÒµ½¶ÔÓ¦µÄÉè±¸ÆğÊ¼µã
-					if(node_num < DEVICE_NUM_MAX)																				//ÅĞ¶ÏÊÇ·ñ³¬³öÏŞÖÆ
+
+					while ((NodeInfBuf[node_num][0] != sensor_device[i].devicenum) && (node_num < DEVICE_NUM_MAX))
+						node_num++;				   // åœ¨ç¼“å­˜åŒºæ‰¾åˆ°å¯¹åº”çš„è®¾å¤‡èµ·å§‹ç‚¹
+					if (node_num < DEVICE_NUM_MAX) // åˆ¤æ–­æ˜¯å¦è¶…å‡ºé™åˆ¶
 					{
-						for(u8 j=0; j<sensor_device[i].comnum; j++)						//Ñ­»·¸üĞÂ´ÎÊıÎª¶Ë¿ÚÊı
+						for (u8 j = 0; j < sensor_device[i].comnum; j++) // å¾ªç¯æ›´æ–°æ¬¡æ•°ä¸ºç«¯å£æ•°
 						{
 							NodeInfBuf[node_num + j][15] = ERR;
-							Relay_Set(NodeInfBuf[node_num + j][10] - 1, 0);				//Ñ°ÕÒ¸Ã¶Ë¿Ú¶ÔÓ¦µÄ¼ÌµçÆ÷ºÅ²¢¶Ï¿ª
-							NodeInfBuf[node_num + j][12] = (CLOSE>>16) & 0X0000FFFF;
+							Relay_Set(NodeInfBuf[node_num + j][10] - 1, 0); // å¯»æ‰¾è¯¥ç«¯å£å¯¹åº”çš„ç»§ç”µå™¨å·å¹¶æ–­å¼€
+							NodeInfBuf[node_num + j][12] = (CLOSE >> 16) & 0X0000FFFF;
 							NodeInfBuf[node_num + j][13] = (CLOSE & 0X0000FFFF);
 						}
-						OneNode_Update();																			//ĞŞ¸ÄºóµÄÊı¾İ´Ónodebuf¸üĞÂµ½µ½ÆÁÄ»
-					}		
+						OneNode_Update(); // ä¿®æ”¹åçš„æ•°æ®ä» nodebuf æ›´æ–°åˆ°å±å¹•
+					}
 				}
-				
-				else if((sensor_device[i].errcount < ERRCOUNT) && (sensor_device[i].errflag != 0))				//¼ÆÊ±Ã»³¬È´ÓĞflagÖÃÎ»
+
+				else if ((sensor_device[i].errcount < ERRCOUNT) && (sensor_device[i].errflag != 0)) // è®¡æ—¶æ²¡è¶…å´æœ‰flagç½®ä½
 				{
-					sensor_device[i].errflag = 0;																														//ÖÃÎ»errflag
-					
-					while((NodeInfBuf[node_num][0] != sensor_device[i].devicenum) && (node_num < DEVICE_NUM_MAX)) node_num++;	//ÔÚ»º´æÇøÕÒµ½¶ÔÓ¦µÄÉè±¸ÆğÊ¼µã
-					if(node_num < DEVICE_NUM_MAX)																				//ÅĞ¶ÏÊÇ·ñ³¬³öÏŞÖÆ
+					sensor_device[i].errflag = 0; // å¤ä½ errflag
+
+					while ((NodeInfBuf[node_num][0] != sensor_device[i].devicenum) && (node_num < DEVICE_NUM_MAX))
+						node_num++;				   // ä»ç¼“å­˜åŒºæ‰¾åˆ°å¯¹åº”çš„è®¾å¤‡èµ·å§‹ç‚¹
+					if (node_num < DEVICE_NUM_MAX) // åˆ¤æ–­æ˜¯å¦è¶…å‡ºé™åˆ¶
 					{
-						for(u8 j=0; j<sensor_device[i].comnum; j++)						//Ñ­»·¸üĞÂ´ÎÊıÎª¶Ë¿ÚÊı
+						for (u8 j = 0; j < sensor_device[i].comnum; j++) // å¾ªç¯æ›´æ–°æ¬¡æ•°ä¸ºç«¯å£æ•°
 						{
 							NodeInfBuf[node_num + j][15] = FINE;
 						}
-						OneNode_Update();																			//ĞŞ¸ÄºóµÄÊı¾İ´Ónodebuf¸üĞÂµ½µ½ÆÁÄ»
-					}		
+						OneNode_Update(); // ä¿®æ”¹åçš„æ•°æ®ä» nodebuf æ›´æ–°åˆ°å±å¹•
+					}
 				}
 			}
-			
 		}
-		
-		for(u8 j=0; j < DEVICE_NUM_MAX; j++)
+
+		for (u8 j = 0; j < DEVICE_NUM_MAX; j++)
 		{
-			if((sensor_device[j].devicenum != 0) && (sensor_device[j].errflag == 1))  
+			if ((sensor_device[j].devicenum != 0) && (sensor_device[j].errflag == 1))
 			{
 				sigerr_flag = 1;
 			}
 		}
-		
-		if(sigerr_flag == 1)  
+
+		if (sigerr_flag == 1)
 		{
 			Relay_Set(DEVICE_NUM_MAX, 1);
 		}
-		else						 			Relay_Set(DEVICE_NUM_MAX, 0);
-		
+		else
+			Relay_Set(DEVICE_NUM_MAX, 0);
+
 		error_check_enable = 0;
 	}
 }
 
-
-
-
 /////////////////////////////////////
-//´æ´¢½ÚµãĞÅÏ¢
-//dev : sensor½á¹¹Ìå, blocknum : ĞèÒª´æ´¢µÄÎ»ÖÃ£¨0-8£©
+// å­˜å‚¨èŠ‚ç‚¹ä¿¡æ¯ï¼ˆä¸€ä¸ªèŠ‚ç‚¹ï¼‰
 /////////////////////////////////////
 void DeviceInfSaveRom(sensor *dev)
 {
-	u16 addr = addr_base + (dev->devicenum - 1) * Point_size;														//¸ù¾İblocknum¼ÆËã24C256µØÖ·
-	
-	AT24CXX_WriteOneByte(addr, '#');																									//ROMÇøÕ¼ÓÃ±êÊ¶·û
-	AT24CXX_WriteOneByte(addr + 0X0001, (char) dev->devicenum);												//Éè±¸ºÅ£¬ÓÃ»§ÉèÖÃ
-	
-	AT24CXX_WriteOneByte(addr + 0X0002, (char) (dev->UID >> 24));											//ÒÀ´ÎÌîÈë32Î»Ê¶±ğID	
-	AT24CXX_WriteOneByte(addr + 0X0003, (char) (dev->UID >> 16));	
-	AT24CXX_WriteOneByte(addr + 0X0004, (char) (dev->UID >> 8));	
-	AT24CXX_WriteOneByte(addr + 0X0005, (char) (dev->UID));	
-	
-	AT24CXX_WriteOneByte(addr + 0X0006, dev->comnum);																	//¶Ë¿ÚÊıÁ¿
-	
-	for(u8 k=0; k<dev->comnum; k++)
+	u16 addr = addr_base + (dev->devicenum - 1) * Point_size; // è®¡ç®—èµ·å§‹åœ°å€
+
+	AT24CXX_WriteOneByte(addr, '#');						   // â€˜#â€™ä»£è¡¨å­˜åœ¨èŠ‚ç‚¹
+	AT24CXX_WriteOneByte(addr + 0X0001, (char)dev->devicenum); // è®¾å¤‡å·
+
+	AT24CXX_WriteOneByte(addr + 0X0002, (char)(dev->UID >> 24)); // UID
+	AT24CXX_WriteOneByte(addr + 0X0003, (char)(dev->UID >> 16));
+	AT24CXX_WriteOneByte(addr + 0X0004, (char)(dev->UID >> 8));
+	AT24CXX_WriteOneByte(addr + 0X0005, (char)(dev->UID));
+
+	AT24CXX_WriteOneByte(addr + 0X0006, dev->comnum); // è¯¥è®¾å¤‡ç«¯å£æ•°
+
+	for (u8 k = 0; k < dev->comnum; k++)
 	{
-		for(u8 i=0; i<(dev->addr[k][0]/2)+1; i++)
+		for (u8 i = 0; i < (dev->addr[k][0] / 2) + 1; i++)
 		{
-			AT24CXX_WriteOneByte(addr + 0X0007 + 16 * k + i*2  , (dev->addr[k][i] >> 8) & 0X00FF);			//Éè±¸µØÖ·
-			AT24CXX_WriteOneByte(addr + 0X0007 + 16 * k + i*2+1, (dev->addr[k][i] & 0X00FF));
+			AT24CXX_WriteOneByte(addr + 0X0007 + 16 * k + i * 2, (dev->addr[k][i] >> 8) & 0X00FF); // å­˜æ”¾åœ°å€ï¼Œæ¯ä¸¤ä¸ªå­—èŠ‚ä¸€ä¸ªå­—
+			AT24CXX_WriteOneByte(addr + 0X0007 + 16 * k + i * 2 + 1, (dev->addr[k][i] & 0X00FF));
 		}
 	}
 }
 
-
 /////////////////////////////////////
-//¶ÁÈ¡romÖĞµÄ½ÚµãĞÅÏ¢£¬
-//dev : sensor½á¹¹Ìå, blocknum : ĞèÒª´æ´¢µÄÎ»ÖÃ£¨0-7£©
+// è¯»å–èŠ‚ç‚¹æ•°æ®
 /////////////////////////////////////
 void DeviceInfReadRom(void)
 {
 	u8 sensor_num = 0;
 	u16 addr = addr_base;
-	
-	for(u8 i=0 ; i<DEVICE_NUM_MAX ; i++)
+
+	for (u8 i = 0; i < DEVICE_NUM_MAX; i++)
 	{
-		//addr += i * Point_size;
-		if(AT24CXX_ReadOneByte(addr) == '#')																											//ÅĞ¶Ï´Ë´¦ÊÇ·ñ´æÓĞ½ÚµãĞÅÏ¢
+		// addr += i * Point_size;
+		if (AT24CXX_ReadOneByte(addr) == '#') // è¿™é‡Œæ˜¯å¦æœ‰æœ‰æ•ˆèŠ‚ç‚¹
 		{
-			sensor_device[sensor_num].devicenum = AT24CXX_ReadOneByte(addr + 0X0001);							//¶ÁÈ¡Éè±¸ºÅ
-			
-			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0002) << 24);			//¶ÁÈ¡UID
-			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0003) << 16);			
-			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0004) << 8);			
-			sensor_device[sensor_num].UID |= (u32)AT24CXX_ReadOneByte(addr + 0X0005);			
-			
-			sensor_device[sensor_num].comnum = AT24CXX_ReadOneByte(addr + 0X0006);							//¶ÁÈ¡¶Ë¿ÚÊıÁ¿
-			
-			for(u8 k=0; k<sensor_device[sensor_num].comnum; k++)
+			sensor_device[sensor_num].devicenum = AT24CXX_ReadOneByte(addr + 0X0001); // è®¾å¤‡å·
+
+			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0002) << 24); // UID
+			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0003) << 16);
+			sensor_device[sensor_num].UID |= ((u32)AT24CXX_ReadOneByte(addr + 0X0004) << 8);
+			sensor_device[sensor_num].UID |= (u32)AT24CXX_ReadOneByte(addr + 0X0005);
+
+			sensor_device[sensor_num].comnum = AT24CXX_ReadOneByte(addr + 0X0006); // ç«¯å£æ•°
+
+			for (u8 k = 0; k < sensor_device[sensor_num].comnum; k++)
 			{
-				for(u8 j=0;  j < 8; j++)																																							//¶ÁÈ¡Éè±¸Î»ÖÃ
+				for (u8 j = 0; j < 8; j++) // è¯»å‡ºèŠ‚ç‚¹åœ°å€
 				{
-					sensor_device[sensor_num].addr[k][j] |= ((u16)AT24CXX_ReadOneByte(addr + 0X0007 + 16 * k + j * 2) << 8); 	//¶ÁÈ¡Éè±¸µØÖ·
+					sensor_device[sensor_num].addr[k][j] |= ((u16)AT24CXX_ReadOneByte(addr + 0X0007 + 16 * k + j * 2) << 8); // ï¿½ï¿½È¡ï¿½è±¸ï¿½ï¿½Ö·
 					sensor_device[sensor_num].addr[k][j] |= (u16)AT24CXX_ReadOneByte(addr + 0X0007 + 16 * k + j * 2 + 1);
 				}
 			}
-			sensor_num ++;
+			sensor_num++;
 			addr += Point_size;
 		}
 	}
 }
 
-
-
-
 /////////////////////////////////////
-//É¾³ı½ÚµãĞÅÏ¢
-//dev : sensor½á¹¹Ìå, blocknum : ĞèÒª´æ´¢µÄÎ»ÖÃ£¨0-7£©
+// åˆ é™¤ä¸€ä¸ªèŠ‚ç‚¹ä¿¡æ¯
 /////////////////////////////////////
 void DeviceInfDelete(sensor *dev)
 {
-	u16 addr = addr_base + (dev->devicenum - 1) * Point_size;														//¼ÆËã¸Ã½Úµã¶ÔÓ¦µÄromµØÖ·
-	
-	AT24CXX_WriteOneByte(addr,0XFF);																		//½«¸Ã´¦µÄÕ¼ÓÃ±êÊ¶·ûÇå³ı£¨¡®#¡¯£©
-	
-	memset(dev,0,sizeof(sensor));																				//ÇåÀí½ÚµãËùÔÚÄÚ´æÇø
+	u16 addr = addr_base + (dev->devicenum - 1) * Point_size; // æ ¹æ®è®¾å¤‡å·è®¡ç®—èŠ‚ç‚¹ä½ç½®
+
+	AT24CXX_WriteOneByte(addr, 0XFF); // è¯¥å¤„å†™å…¥ 0XFF å³æ“¦é™¤ â€˜#â€™ æ ‡è¯†
+
+	memset(dev, 0, sizeof(sensor)); // æ¸…ç©ºè¯¥ç»“æ„ä½“
 }
 
-
-
-
 /////////////////////////////////////
-//É¾³ıÈ«²¿ĞÅÏ¢   ½öÓÃÓÚ¿ª·¢µ÷ÊÔ
-//dev : sensor½á¹¹Ìå, blocknum : ĞèÒª´æ´¢µÄÎ»ÖÃ£¨0-7£©
+// æ¸…é™¤æ‰€æœ‰èŠ‚ç‚¹ä¿¡æ¯
 /////////////////////////////////////
 void DeviceInfDeleteAllBlock(void)
 {
-	u16 addr = addr_base;																									//½«¸Ã´¦µÄÕ¼ÓÃ±êÊ¶·ûÇå³ı£¨¡®#¡¯£©
-	for(u8 i=0; i < DEVICE_NUM_MAX ; i++)
-	{	
-		AT24CXX_WriteOneByte(addr + i * Point_size, 0XFF);		
+	u16 addr = addr_base;
+	for (u8 i = 0; i < DEVICE_NUM_MAX; i++)
+	{
+		AT24CXX_WriteOneByte(addr + i * Point_size, 0XFF);
 	}
 }

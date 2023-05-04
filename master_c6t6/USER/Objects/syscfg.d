@@ -1,10 +1,10 @@
 .\objects\syscfg.o: syscfg.c
 .\objects\syscfg.o: syscfg.h
-.\objects\syscfg.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\syscfg.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\syscfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\syscfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\syscfg.o: stm32f10x.h
 .\objects\syscfg.o: ..\CORE\core_cm3.h
-.\objects\syscfg.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\syscfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\syscfg.o: system_stm32f10x.h
 .\objects\syscfg.o: stm32f10x_conf.h
 .\objects\syscfg.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
@@ -27,7 +27,7 @@
 .\objects\syscfg.o: ..\HARDWARE\LORA\lora.h
 .\objects\syscfg.o: ..\HARDWARE\SX127X\example/example_CAD.h
 .\objects\syscfg.o: ..\HARDWARE\SX127X\radio/sx127x_driver.h
-.\objects\syscfg.o: D:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\syscfg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\syscfg.o: ..\HARDWARE\SX127X\hal/sx127x_hal.h
 .\objects\syscfg.o: ..\HARDWARE\SX127X\example/example_TX.h
 .\objects\syscfg.o: ..\HARDWARE\SX127X\example/example_RX.h

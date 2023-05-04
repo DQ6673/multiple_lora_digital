@@ -17,21 +17,21 @@ u8 AT24CXX_ReadOneByte(u16 ReadAddr)
 	
 	if(EE_TYPE>AT24C16)
 	{
-		IIC_Send_Byte(0XA0);	   //·¢ËÍÐ´ÃüÁî
+		IIC_Send_Byte(0XA0);	   //ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
 		IIC_Wait_Ack();
-		IIC_Send_Byte((u8)(ReadAddr>>8));//·¢ËÍ¸ßµØÖ·			
+		IIC_Send_Byte((u8)(ReadAddr>>8));//ï¿½ï¿½ï¿½Í¸ßµï¿½Ö·			
 	}
 	
 	else 
-	IIC_Send_Byte(0XA0+((ReadAddr/256)<<1));   //·¢ËÍÆ÷¼þµØÖ·0XA0,Ð´Êý¾Ý 	 
+	IIC_Send_Byte(0XA0+((ReadAddr/256)<<1));   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·0XA0,Ð´ï¿½ï¿½ï¿½ï¿½ 	 
 	IIC_Wait_Ack(); 
-  IIC_Send_Byte((u8)(ReadAddr&0x00FF));   //·¢ËÍµÍµØÖ·
+  IIC_Send_Byte((u8)(ReadAddr&0x00FF));   //ï¿½ï¿½ï¿½ÍµÍµï¿½Ö·
 	IIC_Wait_Ack();	    
 	IIC_Start();  	 	   
-	IIC_Send_Byte(0XA1);           //½øÈë½ÓÊÕÄ£Ê½			   
+	IIC_Send_Byte(0XA1);           //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½			   
 	IIC_Wait_Ack();	 
   temp=IIC_Read_Byte(0);		   
-  IIC_Stop();//²úÉúÒ»¸öÍ£Ö¹Ìõ¼þ	    
+  IIC_Stop();//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½	    
 	
 	return temp;
 }
@@ -42,31 +42,26 @@ void AT24CXX_WriteOneByte(u16 WriteAddr,u8 DataToWrite)
 	
 	if(EE_TYPE>AT24C16)
 	{
-		IIC_Send_Byte(0XA0);	    //·¢ËÍÐ´ÃüÁî
+		IIC_Send_Byte(0XA0);	    //ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
 		IIC_Wait_Ack();
-		IIC_Send_Byte((u8)(WriteAddr>>8));//·¢ËÍ¸ßµØÖ·
+		IIC_Send_Byte((u8)(WriteAddr>>8));//ï¿½ï¿½ï¿½Í¸ßµï¿½Ö·
  	}
 	
 	else
 	{
-		IIC_Send_Byte(0XA0+((WriteAddr/256)<<1));   //·¢ËÍÆ÷¼þµØÖ·0XA0,Ð´Êý¾Ý 
+		IIC_Send_Byte(0XA0+((WriteAddr/256)<<1));   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·0XA0,Ð´ï¿½ï¿½ï¿½ï¿½ 
 	}	
 	
 	IIC_Wait_Ack();	   
-  IIC_Send_Byte((u8)(WriteAddr&0x00FF));   //·¢ËÍµÍµØÖ·
+  IIC_Send_Byte((u8)(WriteAddr&0x00FF));   //ï¿½ï¿½ï¿½ÍµÍµï¿½Ö·
 	IIC_Wait_Ack(); 	 										  		   
-	IIC_Send_Byte(DataToWrite);     //·¢ËÍ×Ö½Ú							   
+	IIC_Send_Byte(DataToWrite);     //ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½							   
 	IIC_Wait_Ack();  		    	   
-  IIC_Stop();//²úÉúÒ»¸öÍ£Ö¹Ìõ¼þ 
+  IIC_Stop();//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ 
 	
 	delay_ms(5);	
 }
 
-//ÔÚAT24CXXÀïÃæµÄÖ¸¶¨µØÖ·¿ªÊ¼Ð´Èë³¤¶ÈÎªLenµÄÊý¾Ý
-//¸Ãº¯ÊýÓÃÓÚÐ´Èë16bit»òÕß32bitµÄÊý¾Ý.
-//WriteAddr  :¿ªÊ¼Ð´ÈëµÄµØÖ·  
-//DataToWrite:Êý¾ÝÊý×éÊ×µØÖ·
-//Len        :ÒªÐ´ÈëÊý¾ÝµÄ³¤¶È2,4
 
 void AT24CXX_WriteLenByte(u16 WriteAddr,u32 DataToWrite,u8 Len)
 {  	
@@ -77,11 +72,7 @@ void AT24CXX_WriteLenByte(u16 WriteAddr,u32 DataToWrite,u8 Len)
 	}												    
 }
 
-//ÔÚAT24CXXÀïÃæµÄÖ¸¶¨µØÖ·¿ªÊ¼¶Á³ö³¤¶ÈÎªLenµÄÊý¾Ý
-//¸Ãº¯ÊýÓÃÓÚ¶Á³ö16bit»òÕß32bitµÄÊý¾Ý.
-//ReadAddr   :¿ªÊ¼¶Á³öµÄµØÖ· 
-//·µ»ØÖµ     :Êý¾Ý
-//Len        :Òª¶Á³öÊý¾ÝµÄ³¤¶È2,4
+
 u32 AT24CXX_ReadLenByte(u16 ReadAddr,u8 Len)
 {  	
 	u8 t;
@@ -94,17 +85,13 @@ u32 AT24CXX_ReadLenByte(u16 ReadAddr,u8 Len)
 	return temp;												    
 }
 
-//¼ì²éAT24CXXÊÇ·ñÕý³£
-//ÕâÀïÓÃÁË24XXµÄ×îºóÒ»¸öµØÖ·(255)À´´æ´¢±êÖ¾×Ö.
-//Èç¹ûÓÃÆäËû24CÏµÁÐ,Õâ¸öµØÖ·ÒªÐÞ¸Ä
-//·µ»Ø1:¼ì²âÊ§°Ü
-//·µ»Ø0:¼ì²â³É¹¦
+
 u8 AT24CXX_Check(void)
 {
 	u8 temp;
-	temp=AT24CXX_ReadOneByte(0X0001);//±ÜÃâÃ¿´Î¿ª»ú¶¼Ð´AT24CXX			   
+	temp=AT24CXX_ReadOneByte(0X0001);	   
 	if(temp==0X55)return 0;		   
-	else//ÅÅ³ýµÚÒ»´Î³õÊ¼»¯µÄÇé¿ö
+	else
 	{
 		AT24CXX_WriteOneByte(0X0001,0X55);
 		delay_ms(50);
@@ -115,10 +102,10 @@ u8 AT24CXX_Check(void)
 	return 1;											  
 }
 
-//ÔÚAT24CXXÀïÃæµÄÖ¸¶¨µØÖ·¿ªÊ¼¶Á³öÖ¸¶¨¸öÊýµÄÊý¾Ý
-//ReadAddr :¿ªÊ¼¶Á³öµÄµØÖ· ¶Ô24c02Îª0~255
-//pBuffer  :Êý¾ÝÊý×éÊ×µØÖ·
-//NumToRead:Òª¶Á³öÊý¾ÝµÄ¸öÊý
+//ï¿½ï¿½AT24CXXï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ReadAddr :ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ö· ï¿½ï¿½24c02Îª0~255
+//pBuffer  :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·
+//NumToRead:Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¸ï¿½ï¿½ï¿½
 void AT24CXX_Read(u16 ReadAddr,u8 *pBuffer,u16 NumToRead)
 {
 	while(NumToRead)
@@ -128,10 +115,10 @@ void AT24CXX_Read(u16 ReadAddr,u8 *pBuffer,u16 NumToRead)
 	}
 }  
 
-//ÔÚAT24CXXÀïÃæµÄÖ¸¶¨µØÖ·¿ªÊ¼Ð´ÈëÖ¸¶¨¸öÊýµÄÊý¾Ý
-//WriteAddr :¿ªÊ¼Ð´ÈëµÄµØÖ· ¶Ô24c02Îª0~255
-//pBuffer   :Êý¾ÝÊý×éÊ×µØÖ·
-//NumToWrite:ÒªÐ´ÈëÊý¾ÝµÄ¸öÊý
+//ï¿½ï¿½AT24CXXï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ê¼Ð´ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//WriteAddr :ï¿½ï¿½Ê¼Ð´ï¿½ï¿½Äµï¿½Ö· ï¿½ï¿½24c02Îª0~255
+//pBuffer   :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µï¿½Ö·
+//NumToWrite:ÒªÐ´ï¿½ï¿½ï¿½ï¿½ï¿½ÝµÄ¸ï¿½ï¿½ï¿½
 void AT24CXX_Write(u16 WriteAddr,u8 *pBuffer,u16 NumToWrite)
 {
 	while(NumToWrite--)

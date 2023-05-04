@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 5 (build 528) Tool: armlink [4d35e2]
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
 
 ==============================================================================
 
@@ -227,11 +227,11 @@ Section Cross References
     tim.o(i.TIM3_IRQHandler) refers to dwin_app.o(i.DWIN_Buffer_Analysis) for DWIN_Buffer_Analysis
     tim.o(i.TIM3_IRQHandler) refers to tim.o(i.error_tickcount) for error_tickcount
     tim.o(i.TIM3_IRQHandler) refers to tim.o(.data) for error_check_count
-    tim.o(i.TIM4_Init) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
-    tim.o(i.TIM4_Init) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
-    tim.o(i.TIM4_Init) refers to stm32f10x_tim.o(i.TIM_ITConfig) for TIM_ITConfig
-    tim.o(i.TIM4_Init) refers to misc.o(i.NVIC_Init) for NVIC_Init
-    tim.o(i.TIM4_Init) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
+    tim.o(i.TIM3_Init) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    tim.o(i.TIM3_Init) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
+    tim.o(i.TIM3_Init) refers to stm32f10x_tim.o(i.TIM_ITConfig) for TIM_ITConfig
+    tim.o(i.TIM3_Init) refers to misc.o(i.NVIC_Init) for NVIC_Init
+    tim.o(i.TIM3_Init) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
     tim.o(i.error_tickcount) refers to syscfg.o(.bss) for sensor_device
     stm32f10x_it.o(i.GetTick) refers to stm32f10x_it.o(.data) for g_u32SystickCount
     stm32f10x_it.o(i.SysTick_Handler) refers to stm32f10x_it.o(.data) for g_u32SystickCount
@@ -263,7 +263,7 @@ Section Cross References
     syscfg.o(i.systemconfig) refers to relay.o(i.RELAY_Init) for RELAY_Init
     syscfg.o(i.systemconfig) refers to myiic.o(i.IIC_Init) for IIC_Init
     syscfg.o(i.systemconfig) refers to 24cxx.o(i.AT24CXX_Init) for AT24CXX_Init
-    syscfg.o(i.systemconfig) refers to tim.o(i.TIM4_Init) for TIM4_Init
+    syscfg.o(i.systemconfig) refers to tim.o(i.TIM3_Init) for TIM3_Init
     syscfg.o(i.systemconfig) refers to delay.o(i.delay_ms) for delay_ms
     syscfg.o(i.systemconfig) refers to dwin_app.o(i.DWIN_init) for DWIN_init
     syscfg.o(i.systemconfig) refers to syscfg.o(i.NodeInfInit) for NodeInfInit
@@ -1283,7 +1283,7 @@ Image Symbol Table
     i.SysTick_Handler                        0x08002224   Section        0  stm32f10x_it.o(i.SysTick_Handler)
     i.SystemInit                             0x08002234   Section        0  system_stm32f10x.o(i.SystemInit)
     i.TIM3_IRQHandler                        0x08002294   Section        0  tim.o(i.TIM3_IRQHandler)
-    i.TIM4_Init                              0x080022dc   Section        0  tim.o(i.TIM4_Init)
+    i.TIM3_Init                              0x080022dc   Section        0  tim.o(i.TIM3_Init)
     i.TIM_ClearITPendingBit                  0x0800233c   Section        0  stm32f10x_tim.o(i.TIM_ClearITPendingBit)
     i.TIM_Cmd                                0x08002342   Section        0  stm32f10x_tim.o(i.TIM_Cmd)
     i.TIM_GetITStatus                        0x0800235a   Section        0  stm32f10x_tim.o(i.TIM_GetITStatus)
@@ -1595,7 +1595,7 @@ Image Symbol Table
     SysTick_Handler                          0x08002225   Thumb Code    12  stm32f10x_it.o(i.SysTick_Handler)
     SystemInit                               0x08002235   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
     TIM3_IRQHandler                          0x08002295   Thumb Code    58  tim.o(i.TIM3_IRQHandler)
-    TIM4_Init                                0x080022dd   Thumb Code    92  tim.o(i.TIM4_Init)
+    TIM3_Init                                0x080022dd   Thumb Code    92  tim.o(i.TIM3_Init)
     TIM_ClearITPendingBit                    0x0800233d   Thumb Code     6  stm32f10x_tim.o(i.TIM_ClearITPendingBit)
     TIM_Cmd                                  0x08002343   Thumb Code    24  stm32f10x_tim.o(i.TIM_Cmd)
     TIM_GetITStatus                          0x0800235b   Thumb Code    34  stm32f10x_tim.o(i.TIM_GetITStatus)
@@ -1849,7 +1849,7 @@ Memory Map of the image
     0x08002224   0x08002224   0x00000010   Code   RO         2042    i.SysTick_Handler   stm32f10x_it.o
     0x08002234   0x08002234   0x00000060   Code   RO         2126    i.SystemInit        system_stm32f10x.o
     0x08002294   0x08002294   0x00000048   Code   RO         1997    i.TIM3_IRQHandler   tim.o
-    0x080022dc   0x080022dc   0x00000060   Code   RO         1998    i.TIM4_Init         tim.o
+    0x080022dc   0x080022dc   0x00000060   Code   RO         1998    i.TIM3_Init         tim.o
     0x0800233c   0x0800233c   0x00000006   Code   RO          774    i.TIM_ClearITPendingBit  stm32f10x_tim.o
     0x08002342   0x08002342   0x00000018   Code   RO          779    i.TIM_Cmd           stm32f10x_tim.o
     0x0800235a   0x0800235a   0x00000022   Code   RO          800    i.TIM_GetITStatus   stm32f10x_tim.o
@@ -1928,34 +1928,34 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       206          4          0          1          0       2730   24cxx.o
-         0          0          0          0          0       4532   core_cm3.o
-       220         26          0          4          0       1879   delay.o
-      2130         90          0        324          0       8316   dwin_app.o
-       416         38          0         32         30       5305   dwin_set.o
-        56         10          0          0          0        531   led.o
-       804         52         12          3         12       4286   lora.o
-        24          0          0          0          0        467   main.o
-       152         12          0          0          0     255214   misc.o
-       708        102          0          0          0       4554   myiic.o
-       248         40          0          0          0       1233   relay.o
-        64         26        236          0       1536        820   startup_stm32f10x_md.o
-       454          6          0          0          0       4777   stm32f10x_gpio.o
-        52         10          0          4          0     206284   stm32f10x_it.o
-        68         30          0          0          0       2674   stm32f10x_iwdg.o
-       340         44          0         20          0       5848   stm32f10x_rcc.o
-       112          0          0          0          0       4070   stm32f10x_spi.o
-       246         42          0          0          0       3786   stm32f10x_tim.o
-       646         28          0          0          0       8408   stm32f10x_usart.o
-      1460         76          0         76          0      25838   sx127x_driver.o
-       528         60          0          0          0       5779   sx127x_hal.o
-      1466         28          0          2       1408       6779   syscfg.o
-       328         28          0         20          0       2277   system_stm32f10x.o
-       300         22          0          5          0       3089   tim.o
-       516         42          0          7          0       1841   usart.o
+       206          4          0          1          0       2502   24cxx.o
+         0          0          0          0          0       4540   core_cm3.o
+       220         26          0          4          0       1695   delay.o
+      2130         90          0        324          0       7676   dwin_app.o
+       416         38          0         32         30       4897   dwin_set.o
+        56         10          0          0          0        487   led.o
+       804         52         12          3         12       4018   lora.o
+        24          0          0          0          0        423   main.o
+       152         12          0          0          0     254774   misc.o
+       708        102          0          0          0       4190   myiic.o
+       248         40          0          0          0       1141   relay.o
+        64         26        236          0       1536        800   startup_stm32f10x_md.o
+       454          6          0          0          0       4501   stm32f10x_gpio.o
+        52         10          0          4          0     205704   stm32f10x_it.o
+        68         30          0          0          0       2450   stm32f10x_iwdg.o
+       340         44          0         20          0       5540   stm32f10x_rcc.o
+       112          0          0          0          0       3798   stm32f10x_spi.o
+       246         42          0          0          0       3514   stm32f10x_tim.o
+       646         28          0          0          0       7904   stm32f10x_usart.o
+      1460         76          0         76          0      24902   sx127x_driver.o
+       528         60          0          0          0       5335   sx127x_hal.o
+      1466         28          0          2       1408       6263   syscfg.o
+       328         28          0         20          0       2057   system_stm32f10x.o
+       300         22          0          5          0       2825   tim.o
+       516         42          0          7          0       1705   usart.o
 
     ----------------------------------------------------------------------
-     11572        816        280        504       2988     571317   Object Totals
+     11572        816        280        504       2988     563641   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          0          6          2          0   (incl. Padding)
 
@@ -2012,8 +2012,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12628        852        280        504       3088     565329   Grand Totals
-     12628        852        280        120       3088     565329   ELF Image Totals (compressed)
+     12628        852        280        504       3088     557653   Grand Totals
+     12628        852        280        120       3088     557653   ELF Image Totals (compressed)
      12628        852        280        120          0          0   ROM Totals
 
 ==============================================================================

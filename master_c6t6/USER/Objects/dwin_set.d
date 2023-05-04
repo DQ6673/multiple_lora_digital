@@ -3,7 +3,7 @@
 .\objects\dwin_set.o: ..\SYSTEM\sys\sys.h
 .\objects\dwin_set.o: ..\USER\stm32f10x.h
 .\objects\dwin_set.o: ..\CORE\core_cm3.h
-.\objects\dwin_set.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\dwin_set.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\dwin_set.o: ..\USER\system_stm32f10x.h
 .\objects\dwin_set.o: ..\USER\stm32f10x_conf.h
 .\objects\dwin_set.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h

@@ -2,7 +2,7 @@
 .\objects\tim.o: ..\HARDWARE\TIM\tim.h
 .\objects\tim.o: ..\USER\stm32f10x.h
 .\objects\tim.o: ..\CORE\core_cm3.h
-.\objects\tim.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\tim.o: ..\USER\system_stm32f10x.h
 .\objects\tim.o: ..\USER\stm32f10x_conf.h
 .\objects\tim.o: ..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h
@@ -18,8 +18,8 @@
 .\objects\tim.o: ..\USER\DWIN_APP.h
 .\objects\tim.o: ..\USER\DWIN_SET.H
 .\objects\tim.o: ..\USER\syscfg.h
-.\objects\tim.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\tim.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
+.\objects\tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\tim.o: ..\USER\stm32f10x_it.h
 .\objects\tim.o: ..\SYSTEM\usart\usart.h
 .\objects\tim.o: ..\SYSTEM\delay\delay.h
@@ -30,7 +30,7 @@
 .\objects\tim.o: ..\HARDWARE\LORA\lora.h
 .\objects\tim.o: ..\HARDWARE\SX127X\example/example_CAD.h
 .\objects\tim.o: ..\HARDWARE\SX127X\radio/sx127x_driver.h
-.\objects\tim.o: D:\keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\tim.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\tim.o: ..\HARDWARE\SX127X\hal/sx127x_hal.h
 .\objects\tim.o: ..\HARDWARE\SX127X\example/example_TX.h
 .\objects\tim.o: ..\HARDWARE\SX127X\example/example_RX.h
