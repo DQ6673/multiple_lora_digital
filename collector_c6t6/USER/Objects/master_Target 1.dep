@@ -1,0 +1,447 @@
+Dependencies for Project 'master', Target 'Target 1': (DO NOT MODIFY !)
+F (..\CORE\core_cm3.c)(0x60289528)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\core_cm3.o --omf_browse .\objects\core_cm3.crf --depend .\objects\core_cm3.d)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\CORE\startup_stm32f10x_md.s)(0x60289519)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 524" --pd "STM32F10X_LD SETA 1"--list .\listings\startup_stm32f10x_md.lst --xref -o .\objects\startup_stm32f10x_md.o --depend .\objects\startup_stm32f10x_md.d)
+F (..\STM32F10x_FWLib\src\misc.c)(0x6028955A)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+F (..\STM32F10x_FWLib\src\stm32f10x_gpio.c)(0x60289549)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_gpio.o --omf_browse .\objects\stm32f10x_gpio.crf --depend .\objects\stm32f10x_gpio.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_i2c.c)(0x60289544)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_i2c.o --omf_browse .\objects\stm32f10x_i2c.crf --depend .\objects\stm32f10x_i2c.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_i2c.h)(0x6028956E)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_rcc.c)(0x6028954B)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_rcc.o --omf_browse .\objects\stm32f10x_rcc.crf --depend .\objects\stm32f10x_rcc.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_spi.c)(0x60289534)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_spi.o --omf_browse .\objects\stm32f10x_spi.crf --depend .\objects\stm32f10x_spi.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_tim.c)(0x60289542)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_tim.o --omf_browse .\objects\stm32f10x_tim.crf --depend .\objects\stm32f10x_tim.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_usart.c)(0x60289530)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_usart.o --omf_browse .\objects\stm32f10x_usart.crf --depend .\objects\stm32f10x_usart.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_exti.c)(0x6028954D)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_exti.o --omf_browse .\objects\stm32f10x_exti.crf --depend .\objects\stm32f10x_exti.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\STM32F10x_FWLib\src\stm32f10x_iwdg.c)(0x60289544)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_iwdg.o --omf_browse .\objects\stm32f10x_iwdg.crf --depend .\objects\stm32f10x_iwdg.d)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\SYSTEM\sys\sys.c)(0x603A218D)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\SYSTEM\delay\delay.c)(0x6029E03D)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (..\SYSTEM\delay\delay.h)(0x603A1EEE)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\HARDWARE\LED\led.c)(0x605DB731)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (..\HARDWARE\LORA\lora.c)(0x60F51694)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\lora.o --omf_browse .\objects\lora.crf --depend .\objects\lora.d)
+I (..\HARDWARE\LORA\lora.h)(0x604451D8)
+I (..\HARDWARE\SX127X\example/example_CAD.h)(0x5E0FEA9B)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (..\HARDWARE\SX127X\example/example_TX.h)(0x5E0FE725)
+I (..\HARDWARE\SX127X\example/example_RX.h)(0x5E102DF8)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\USER\syscfg.h)(0x63281D39)
+I (..\SYSTEM\usart\usart.h)(0x6030AC42)
+I (..\SYSTEM\delay\delay.h)(0x603A1EEE)
+I (..\HARDWARE\TIM\tim.h)(0x6030B4EC)
+I (..\HARDWARE\DETECTION\detection.h)(0x605EF237)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+F (..\HARDWARE\TIM\tim.c)(0x628A5737)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\tim.o --omf_browse .\objects\tim.crf --depend .\objects\tim.d)
+I (..\HARDWARE\TIM\tim.h)(0x6030B4EC)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\HARDWARE\DETECTION\detection.h)(0x605EF237)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+F (..\HARDWARE\DETECTION\detection.c)(0x6103FC5E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\detection.o --omf_browse .\objects\detection.crf --depend .\objects\detection.d)
+I (..\HARDWARE\DETECTION\detection.h)(0x605EF237)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+F (.\stm32f10x_it.c)(0x6029E029)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f10x_it.o --omf_browse .\objects\stm32f10x_it.crf --depend .\objects\stm32f10x_it.d)
+I (stm32f10x_it.h)(0x6029C9CC)
+I (stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (system_stm32f10x.h)(0x60289484)
+I (stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (.\system_stm32f10x.c)(0x6028A16C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\system_stm32f10x.o --omf_browse .\objects\system_stm32f10x.crf --depend .\objects\system_stm32f10x.d)
+I (stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (system_stm32f10x.h)(0x60289484)
+I (stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+F (.\syscfg.c)(0x628A5737)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\syscfg.o --omf_browse .\objects\syscfg.crf --depend .\objects\syscfg.d)
+I (syscfg.h)(0x63281D39)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+I (stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (system_stm32f10x.h)(0x60289484)
+I (stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (stm32f10x_it.h)(0x6029C9CC)
+I (..\SYSTEM\usart\usart.h)(0x6030AC42)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\SYSTEM\delay\delay.h)(0x603A1EEE)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\HARDWARE\LORA\lora.h)(0x604451D8)
+I (..\HARDWARE\SX127X\example/example_CAD.h)(0x5E0FEA9B)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\HARDWARE\SX127X\example/example_TX.h)(0x5E0FE725)
+I (..\HARDWARE\SX127X\example/example_RX.h)(0x5E102DF8)
+I (..\HARDWARE\TIM\tim.h)(0x6030B4EC)
+I (..\HARDWARE\DETECTION\detection.h)(0x605EF237)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+F (.\main.c)(0x6063F140)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (syscfg.h)(0x63281D39)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+I (stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (system_stm32f10x.h)(0x60289484)
+I (stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (stm32f10x_it.h)(0x6029C9CC)
+I (..\SYSTEM\usart\usart.h)(0x6030AC42)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+I (..\SYSTEM\delay\delay.h)(0x603A1EEE)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\HARDWARE\LORA\lora.h)(0x604451D8)
+I (..\HARDWARE\SX127X\example/example_CAD.h)(0x5E0FEA9B)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\HARDWARE\SX127X\example/example_TX.h)(0x5E0FE725)
+I (..\HARDWARE\SX127X\example/example_RX.h)(0x5E102DF8)
+I (..\HARDWARE\TIM\tim.h)(0x6030B4EC)
+I (..\HARDWARE\DETECTION\detection.h)(0x605EF237)
+I (..\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x60289579)
+F (..\HARDWARE\SX127X\HAL\SX127x_hal.c)(0x605DB501)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\sx127x_hal.o --omf_browse .\objects\sx127x_hal.crf --depend .\objects\sx127x_hal.d)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\HARDWARE\SX127X\radio\sx127x_driver.c)(0x6030BBDE)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\sx127x_driver.o --omf_browse .\objects\sx127x_driver.crf --depend .\objects\sx127x_driver.d)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\HARDWARE\SX127X\radio/sx1276-LoRa.h)(0x5E104F30)
+I (..\HARDWARE\SX127X\HAL/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+F (..\HARDWARE\SX127X\example\example_CAD.c)(0x6029C687)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\example_cad.o --omf_browse .\objects\example_cad.crf --depend .\objects\example_cad.d)
+I (..\HARDWARE\SX127X\example/example_CAD.h)(0x5E0FEA9B)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\HARDWARE\SX127X\example\example_RX.c)(0x602DD862)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\example_rx.o --omf_browse .\objects\example_rx.crf --depend .\objects\example_rx.d)
+I (..\HARDWARE\SX127X\example/example_CAD.h)(0x5E0FEA9B)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
+F (..\HARDWARE\SX127X\example\example_TX.c)(0x602DE583)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\HARDWARE\LED -I ..\STM32F10x_FWLib\inc -I ..\SYSTEM\usart -I ..\SYSTEM\sys -I ..\SYSTEM\delay -I ..\USER -I ..\CORE -I ..\HARDWARE\SX127X -I ..\HARDWARE\LORA -I ..\HARDWARE\TIM -I ..\HARDWARE\EXTI -I ..\HARDWARE\DETECTION-I.\RTE\_Target_1-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_LD -DUSE_STDPERIPH_DRIVER-o .\objects\example_tx.o --omf_browse .\objects\example_tx.crf --depend .\objects\example_tx.d)
+I (..\HARDWARE\SX127X\example/example_TX.h)(0x5E0FE725)
+I (..\HARDWARE\SX127X\radio/sx127x_driver.h)(0x602DE577)
+I (D:\keil\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\HARDWARE\SX127X\hal/sx127x_hal.h)(0x5DF8E15F)
+I (..\USER\stm32f10x.h)(0x602894E7)
+I (..\CORE\core_cm3.h)(0x6028952B)
+I (..\USER\system_stm32f10x.h)(0x60289484)
+I (..\USER\stm32f10x_conf.h)(0x6063EFCB)
+I (..\STM32F10x_FWLib\inc\stm32f10x_dbgmcu.h)(0x6028957D)
+I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x6029C4AC)
+I (..\STM32F10x_FWLib\inc\stm32f10x_iwdg.h)(0x6028956E)
+I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x60289569)
+I (..\STM32F10x_FWLib\inc\stm32f10x_spi.h)(0x60289564)
+I (..\STM32F10x_FWLib\inc\stm32f10x_tim.h)(0x6028956B)
+I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x60289562)
+I (..\STM32F10x_FWLib\inc\misc.h)(0x60289587)
+I (..\USER\stm32f10x_it.h)(0x6029C9CC)
+I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\keil\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\HARDWARE\LED\led.h)(0x605DB731)
+I (..\SYSTEM\sys\sys.h)(0x6028952D)
