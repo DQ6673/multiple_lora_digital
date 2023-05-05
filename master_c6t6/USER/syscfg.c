@@ -28,7 +28,7 @@ void systemconfig(void)
 
 	delay_ms(1500);
 	DWIN_init(); // DWIN屏幕初始化
-	NodeInfInit();
+	NodeInfInit();	// 节点信息初始化
 	IWDG_Config(IWDG_Prescaler_64, 625); // 看门狗配置
 }
 

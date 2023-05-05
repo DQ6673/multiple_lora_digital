@@ -2,40 +2,31 @@
 #define __SYSCFG_H
 
 
-//������
+#define DEVICE_NUM_MAX 8 // 支持的最多节点数
+
+#define sensornum 0
+#define pairEN 1
+#define pagenum 2
+
+#define ERRCOUNT 500
+
+#define Point_size 160
+#define addr_base 0x00F0
 /************************************************************************/
 
-																					
-#define 		DEVICE_NUM_MAX		8						//����ʹ�õı�������˿�����
-																					//��Ϊ8�����9���̵�������9���̵���Ϊ�źż��̵���
-																					//��Ϊ5�����6���̵�������6���̵���Ϊ�źż��̵���
-
-#define			sensornum					0
-#define			pairEN						1
-#define			pagenum						2
-
-#define 		ERRCOUNT					500		
-
-#define 	Point_size		160
-#define   addr_base     0x00F0
 /************************************************************************/
-
-
-
-//ͷ�ļ�
-/************************************************************************/
-//lib include
+// lib include
 #include "stdio.h"
 #include "string.h"
 #include "stm32f10x.h"
 #include "stm32f10x_it.h"
 
-//system include
+// system include
 #include "usart.h"
 #include "delay.h"
 #include "sys.h"
 
-//hardware include
+// hardware include
 #include "led.h"
 #include "myiic.h"
 #include "24cxx.h"
@@ -46,18 +37,16 @@
 
 /************************************************************************/
 
-
 typedef struct
 {
-	u8 devicenum;				//�豸��
-	u8 comnum;					//�˿���
-	u32 UID;						//�ɼ���ΨһID
-	u8 dat;							//�ɼ����ݣ�8λ��
-	u16 errcount;		//�ɼ���ͨ��״̬
-	u8  errflag;
-	u16 addr[8][10];// = {14, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020};
-}sensor;
-
+	u8 devicenum; // �豸��
+	u8 comnum;	  // �˿���
+	u32 UID;	  // �ɼ���ΨһID
+	u8 dat;		  // �ɼ����ݣ�8λ��
+	u16 errcount; // �ɼ���ͨ��״̬
+	u8 errflag;
+	u16 addr[8][10]; // = {14, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020, 0X2020};
+} sensor;
 
 extern u8 OP_STA;
 extern sensor sensor_device[8];
@@ -73,6 +62,5 @@ void OPSTA_Set(u8 item, u8 num);
 u8 OPSTA_Get(u8 item);
 void NodeInfInit(void);
 void signalerror_check(void);
-
 
 #endif

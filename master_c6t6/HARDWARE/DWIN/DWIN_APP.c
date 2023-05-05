@@ -98,7 +98,7 @@ void DWINchangepage(void)
 {
 	switch (DWIN_RX_BUF[3])
 	{
-	case 0X00:
+		case 0X00:	//上一页
 		if (OPSTA_Get(pagenum) == 1)
 		{
 			OPSTA_Set(pagenum, 0);
@@ -108,7 +108,7 @@ void DWINchangepage(void)
 		}
 		break;
 
-	case 0X10:
+	case 0X10:		//下一页
 		if (OPSTA_Get(pagenum) == 0)
 		{
 			OPSTA_Set(pagenum, 1);
@@ -134,7 +134,7 @@ void Addnewdevice(void)
 
 	switch (DWIN_RX_BUF[3])
 	{
-	case 0X00:
+	case 0X00:	// 在节点列表页（页1）点击添加传感器按键
 		OPSTA_Set(pairEN, 1);	 // 允许配对
 		DWINPagePicSet(2);		 // 转到添加页
 		DWINsenddata(0X1940, 0); // 清除设置设备号
@@ -144,7 +144,7 @@ void Addnewdevice(void)
 		NodeInfBuf[8][1] = 0;
 		break;
 
-	case 0X10:
+	case 0X10: // 确认按键
 		OPSTA_Set(pairEN, 0);	  // 禁止配对
 		i = OPSTA_Get(sensornum); // 获得已找到的空结构体号
 		if (i < DEVICE_NUM_MAX)	  // 判断是否超出范围
@@ -173,14 +173,14 @@ void Addnewdevice(void)
 		DWINPagePicSet(1); // 回到设备列表页
 		break;
 
-	case 0X20:
+	case 0X20:	// 取消配对按键
 		OPSTA_Set(pairEN, 0); // 禁止配对
 		PageNodelist_Clear();
 		PageNodeList_Update();
 		DWINPagePicSet(1); // 回到设备列表页
 		break;
 
-	case 0X30:
+	case 0X30:	// 设置设备号按键
 		NodeInfBuf[8][0] = DWIN_RX_BUF[6]; // 获取设置的设备号
 		DWINsenddata(0X1940, NodeInfBuf[8][0]);
 		break;
@@ -190,6 +190,7 @@ void Addnewdevice(void)
 	}
 }
 
+// 设备信息页，显示设备信息
 void NodeInfHandler(void)
 {
 	u8 click_num = (DWIN_RX_BUF[3] >> 4) & 0X0F;
@@ -198,14 +199,14 @@ void NodeInfHandler(void)
 	if (click_num == 4) // 执行返回操作，返回节点列表
 	{
 		OPSTA_Set(sensornum, 0X0F); // 复位结构体暂存号
-		DWINPagePicSet(1);
+		DWINPagePicSet(1);					// 回到设备列表页
 	}
 
 	else // 进入设备信息页，刷新显示信息
 	{
 		if (NodeInfBuf[node_num][0] != 0) // 判断点击处是否存在节点，否则不执行操作
 		{
-			DWINPagePicSet(3);
+			DWINPagePicSet(3);				// 进入单个设备信息页
 
 			for (u8 i = 0; i < DEVICE_NUM_MAX; i++)
 			{
@@ -272,12 +273,14 @@ void PageNodeList_Update()
 			DWINsendtext(0X1300 + (i << 4), &NodeInfBuf[read_p][2]); // 显示位置
 
 			DWINsendtext(0X1400 + (i << 4), &NodeInfBuf[read_p][11]); // 显示继电器通断
+			
 			if (NodeInfBuf[read_p][13] == (OPEN & 0X0000FFFF))
 				DWINsettextcolor(0X1400 + (i << 4), D_YELLOW);
 			else
 				DWINsettextcolor(0X1400 + (i << 4), D_ORANGE);
 
 			DWINsendtext(0X1500 + (i << 4), &NodeInfBuf[read_p][14]); // 显示通信状况
+			
 			if (NodeInfBuf[read_p][15] == ERR)
 				DWINsettextcolor(0X1500 + (i << 4), D_RED);
 			else
@@ -287,6 +290,7 @@ void PageNodeList_Update()
 }
 
 // 此函数用于实时状态更新，仅更新频繁信息
+// 不更新地址，设备号，端口数等不变信息
 void OneNode_Update(void)
 {
 	u8 read_p = OPSTA_Get(pagenum) * 4; // 获取页数
@@ -296,12 +300,14 @@ void OneNode_Update(void)
 		if (NodeInfBuf[read_p][0] != 0) // 缓存区中的设备号不为零才执行显示操作
 		{
 			DWINsendtext(0X1400 + (i << 4), &NodeInfBuf[read_p][11]); // 显示继电器通断
+			
 			if (NodeInfBuf[read_p][13] == (OPEN & 0X0000FFFF))
 				DWINsettextcolor(0X1400 + (i << 4), D_YELLOW);
 			else
 				DWINsettextcolor(0X1400 + (i << 4), D_ORANGE);
 
 			DWINsendtext(0X1500 + (i << 4), &NodeInfBuf[read_p][14]); // 显示通信状况
+			
 			if (NodeInfBuf[read_p][15] == ERR)
 				DWINsettextcolor(0X1500 + (i << 4), D_RED);
 			else
@@ -343,7 +349,7 @@ void nodeBuf_refresh(void)
 
 	if (t < DEVICE_NUM_MAX)
 	{
-		for (; t < DEVICE_NUM_MAX; t++)
+		for (; t < DEVICE_NUM_MAX; t++)	//填上 DEVICE_NUM_MAX 组节点数据，最多就8个继电器
 		{
 			sensor_num = 0;
 			while (devnodenum[t] != sensor_device[sensor_num].devicenum)
@@ -373,7 +379,7 @@ void nodeBuf_refresh(void)
 // DWIN初始化函数
 void DWIN_init(void)
 {
-	//	DWINSendMessage();  		//虚晃一枪，防止首条指令会吞掉一个5A
+	// DWINSendMessage();  		//虚晃一枪，防止首条指令会吞掉一个5A
 
 	PageNodelist_Clear();
 	DWINPagePicSet(1); // 转到开始页
