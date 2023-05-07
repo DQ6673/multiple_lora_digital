@@ -37,19 +37,19 @@ void DWIN_Buffer_Analysis() // test
 		switch (DWIN_RX_BUF[2])
 		{
 		case 0X18:
-			DWINchangepage();
+			DWINchangepage();			// 翻页
 			break;
 		case 0X19:
-			Addnewdevice();
+			Addnewdevice();				// 添加传感器
 			break;
-		case 0X16:
-			NodeInfHandler();
+		case 0X16:	// 点击设备号 1600~1630
+			NodeInfHandler();			// 查看设备信息
 			break;
 		case 0X20:
-			DeleteOneNode();
+			DeleteOneNode();			// 删除节点
 			break;
-		case 0X17:
-			Addr_change();
+		case 0X17:	// 地址按键 1700 - 1730
+			Addr_change();				// 修改地址
 			break;
 
 		default:
@@ -125,7 +125,7 @@ void DWINchangepage(void)
 
 /////////////////////////////////////////////////////////////////
 // 添加设备系列按键
-// DWIN_RX_BUF[3] = 00 添加按钮，10 确认添加， 20取消添加
+// DWIN_RX_BUF[3] = 1900 添加按钮，1910 确认添加，1920取消添加，1930设置设备号
 /////////////////////////////////////////////////////////////////
 void Addnewdevice(void)
 {
@@ -134,7 +134,7 @@ void Addnewdevice(void)
 
 	switch (DWIN_RX_BUF[3])
 	{
-	case 0X00:	// 在节点列表页（页1）点击添加传感器按键
+	case 0X00:	// 1900 在节点列表页（页1）点击添加传感器按键
 		OPSTA_Set(pairEN, 1);	 // 允许配对
 		DWINPagePicSet(2);		 // 转到添加页
 		DWINsenddata(0X1940, 0); // 清除设置设备号
@@ -144,7 +144,7 @@ void Addnewdevice(void)
 		NodeInfBuf[8][1] = 0;
 		break;
 
-	case 0X10: // 确认按键
+	case 0X10: // 1910 确认按键
 		OPSTA_Set(pairEN, 0);	  // 禁止配对
 		i = OPSTA_Get(sensornum); // 获得已找到的空结构体号
 		if (i < DEVICE_NUM_MAX)	  // 判断是否超出范围
@@ -173,14 +173,14 @@ void Addnewdevice(void)
 		DWINPagePicSet(1); // 回到设备列表页
 		break;
 
-	case 0X20:	// 取消配对按键
+	case 0X20:	// 1920 取消配对按键
 		OPSTA_Set(pairEN, 0); // 禁止配对
 		PageNodelist_Clear();
 		PageNodeList_Update();
 		DWINPagePicSet(1); // 回到设备列表页
 		break;
 
-	case 0X30:	// 设置设备号按键
+	case 0X30:	// 1930 设置设备号按键
 		NodeInfBuf[8][0] = DWIN_RX_BUF[6]; // 获取设置的设备号
 		DWINsenddata(0X1940, NodeInfBuf[8][0]);
 		break;

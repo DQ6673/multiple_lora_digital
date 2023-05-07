@@ -1,0 +1,5 @@
+master_c6t6/USER/Objects/*
+!master_c6t6/USER/Objects/master.hex
+
+collector_c6t6/USER/Objects/*
+!collector_c6t6/USER/Objects/master.hex
