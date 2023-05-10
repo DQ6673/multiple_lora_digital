@@ -2,7 +2,7 @@
 #define __SYSCFG_H
 
 
-#define DEVICE_NUM_MAX 8 // 支持的最多节点数
+#define DEVICE_NUM_MAX 5 // 支持的最多节点数
 
 #define sensornum 0
 #define pairEN 1

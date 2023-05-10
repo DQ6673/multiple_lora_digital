@@ -359,7 +359,7 @@ void nodeBuf_refresh(void)
 			{																							 // writeBuf_p 不允许大于8
 				test_pin = 3;
 				NodeInfBuf[writeBuf_p][0] = sensor_device[sensor_num].devicenum; // 设备号
-				NodeInfBuf[writeBuf_p][1] = i + 1;								 // 端口号，从1开始
+				NodeInfBuf[writeBuf_p][1] = i + 1;								 // 设备端口号，从1开始
 
 				for (u8 j = 0; j < 8; j++)
 				{
