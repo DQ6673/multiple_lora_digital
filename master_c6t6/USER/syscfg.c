@@ -7,7 +7,7 @@ sensor sensor_device[8];
 u16 test_pin = 0;
 extern u8 error_check_enable;
 
-void systemconfig(void)
+void driver_init(void)
 {
 	delay_init();
 
@@ -27,8 +27,12 @@ void systemconfig(void)
 	// DeviceInfDeleteAllBlock();
 
 	delay_ms(1500);
-	DWIN_init(); // DWIN屏幕初始化
-	NodeInfInit();	// 节点信息初始化
+}
+
+void software_init(void)
+{
+	DWIN_init();						 // DWIN屏幕初始化
+	NodeInfInit();						 // 节点信息初始化
 	IWDG_Config(IWDG_Prescaler_64, 625); // 看门狗配置
 }
 

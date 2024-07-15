@@ -23,7 +23,7 @@ void Lora_callback(void)
 	{
 		if(rxBuf[0] == '#' && rxBuf[7] == '#' && rxBuf[11] == '#')			//检查数据格式
 		{
-			UID_temp = ((u32)rxBuf[3] << 24) + ((u32)rxBuf[3] << 16) + ((u32)rxBuf[3] << 8) + ((u32)rxBuf[3]); 	//拼接UID
+			UID_temp = ((u32)rxBuf[3] << 24) + ((u32)rxBuf[4] << 16) + ((u32)rxBuf[5] << 8) + ((u32)rxBuf[6]); 	//拼接UID
 			comnum_temp = rxBuf[8];																																							//获取端口数量
 			comnum_sum = comnum_temp;
 			
